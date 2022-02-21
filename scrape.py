@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 
+def write_to_file(data):
+    with open('output.txt', mode='w') as output_file:
+      for elem in data:
+        output_file.write(str(elem) + '\n\n')
+
 def sort_stories_by_votes(hnlist):
   return sorted(hnlist, key=lambda k:k['votes'], reverse=True) 
 
@@ -32,4 +37,4 @@ for page in range(1, 4):
 
 flat_list_hn = [item for sublist in hn_first_and_second for item in sublist]
 
-pprint.pprint(sort_stories_by_votes(flat_list_hn))
+write_to_file(sort_stories_by_votes(flat_list_hn))
