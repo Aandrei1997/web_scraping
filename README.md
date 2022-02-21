@@ -2,5 +2,6 @@ Project that scrape the site https://news.ycombinator.com/news? and extract from
 
 Prerequisites:
 - BeautifulSoup
+- requests
 
-Install the package with the following command: pip install BeautifulSoup
+Install those packages with the following command: pip install <name_of_the_module>.
